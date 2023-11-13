@@ -1,0 +1,10 @@
+{
+    "kind": "navPresentation",
+    "id": "labsol:dashboardNavPresentation",
+    "title": "labsol",
+    "icon": "ChartType.WorldMap",
+    "destination": {
+        "type": "path",
+        "value": "/templates/v1/labsol:intersightDashboard?ctx.since=now+-1d"
+    }
+}

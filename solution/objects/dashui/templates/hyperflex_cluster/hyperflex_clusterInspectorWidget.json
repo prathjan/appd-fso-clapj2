@@ -1,0 +1,296 @@
+{
+    "kind": "template",
+    "name": "labsol:hyperflex_clusterInspectorWidget",
+    "target": "labsol:hyperflex_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                },
+                "elements": {
+                    "instanceOf": {
+                        "name": "properties"
+                    },
+                    "elements": [
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "labsol.account.name"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(labsol.account.name)"
+                            }
+                        },
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "labsol.hyperflex.device.id"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(labsol.hyperflex.device.id)"
+                            }
+                        }
+                    ]
+                },
+                "title": "Properties"
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.read.iops, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " IOPs",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.read.iops, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.read.iops",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Read IOPs",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.write.iops, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " IOPs",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.write.iops, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.write.iops",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Write IOPs",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.read.latency, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " ms",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.read.latency, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.read.latency",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Read Latency",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.write.latency, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " ms",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.write.latency, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.write.latency",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Write Latency",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.read.throughput, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " bytes/sec",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.read.throughput, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.read.throughput",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Read Throughput",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(labsol:labsol.hyperflex.write.throughput, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " bytes/sec",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(labsol:labsol.hyperflex.write.throughput, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "labsol:labsol.hyperflex.write.throughput",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "HX Write Throughput",
+                        "instanceOf": {
+                            "name": "labsol:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            }
+        ]
+    }
+}

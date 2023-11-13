@@ -1,0 +1,49 @@
+[
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "${solution}_account_entity_mapping",
+        "displayName": "Intersight Account Entity Mapping",
+        "description": "Intersight Account Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['${solution}.account.name', '${solution}.fsotype']) && 'account'.equals(getValue(resourceAttributes, '${solution}.fsotype'))",
+        "entityType": "${solution}:account",
+        "attributeNameMappings": {
+            "${solution}.account.name": "${solution}.account.name"
+        }
+    },
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "${solution}_hyperflex_entity_mapping",
+        "displayName": "Intersight Hyperflex Entity Mapping",
+        "description": "Intersight Hyperflex Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['${solution}.account.name', '${solution}.hyperflex.device.id', '${solution}.fsotype']) && 'hyperflex_cluster'.equals(getValue(resourceAttributes, '${solution}.fsotype'))",
+        "entityType": "${solution}:hyperflex_cluster",
+        "attributeNameMappings": {
+            "${solution}.account.name": "${solution}.account.name",
+            "${solution}.hyperflex.device.id": "${solution}.hyperflex.device.id"
+        }
+    },
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "${solution}_ucs_domain_entity_mapping",
+        "displayName": "Intersight UCS Domain Entity Mapping",
+        "description": "Intersight UCS Domain Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['${solution}.account.name', '${solution}.host.name', '${solution}.fsotype']) && 'ucs_domain'.equals(getValue(resourceAttributes, '${solution}.fsotype'))",
+        "entityType": "${solution}:ucs_domain",
+        "attributeNameMappings": {
+            "${solution}.account.name": "${solution}.account.name",
+            "${solution}.host.name": "${solution}.host.name"
+        }
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "kind": "navPresentation",
+    "id": "${solution}:dashboardNavPresentation",
+    "title": "${solution}",
+    "icon": "ChartType.WorldMap",
+    "destination": {
+        "type": "path",
+        "value": "/templates/v1/${solution}:intersightDashboard?ctx.since=now+-1d"
+    }
+}

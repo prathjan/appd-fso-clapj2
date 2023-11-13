@@ -1,0 +1,117 @@
+[
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "account",
+        "displayName": "Account",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "${solution}.account.name"
+            ],
+            "required": [
+                "${solution}.account.name"
+            ],
+            "attributes": {
+                "${solution}.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                }
+            }
+        },
+        "metricTypes": [
+            "${solution}:${solution}.vm_count"
+        ],
+        "associationTypes": {
+            "common:consists_of": [
+                "${solution}:hyperflex_cluster",
+                "${solution}:ucs_domain"
+            ]
+        }
+    },
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "hyperflex_cluster",
+        "displayName": "Hyperflex Cluster",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "${solution}.account.name",
+                "${solution}.hyperflex.device.id"
+            ],
+            "required": [
+                "${solution}.account.name",
+                "${solution}.hyperflex.device.id"
+            ],
+            "attributes": {
+                "${solution}.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                },
+                "${solution}.hyperflex.device.id": {
+                    "type": "string",
+                    "description": "Hyperflex cluster ID"
+                }
+            }
+        },
+        "metricTypes": [
+            "${solution}:${solution}.hyperflex.read.iops",
+            "${solution}:${solution}.hyperflex.write.iops",
+            "${solution}:${solution}.hyperflex.read.throughput",
+            "${solution}:${solution}.hyperflex.write.throughput",
+            "${solution}:${solution}.hyperflex.read.latency",
+            "${solution}:${solution}.hyperflex.write.latency"
+        ]
+    },
+    {
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "ucs_domain",
+        "displayName": "UCS Domain",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "${solution}.account.name",
+                "${solution}.host.name"
+            ],
+            "required": [
+                "${solution}.account.name",
+                "${solution}.host.name"
+            ],
+            "attributes": {
+                "${solution}.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                },
+                "${solution}.host.name": {
+                    "type": "string",
+                    "description": "UCS Domain Name"
+                }
+            }
+        },
+        "metricTypes": [
+            "${solution}:${solution}.ucs.network.utilization.average",
+            "${solution}:${solution}.ucs.network.transmit.rate",
+            "${solution}:${solution}.ucs.network.receive.rate"
+        ]
+    }
+]

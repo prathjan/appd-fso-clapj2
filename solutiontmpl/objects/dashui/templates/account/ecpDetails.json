@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "${solution}:account",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "${solution}:accountDetailsList"
+            }
+        ],
+        "nameAttribute": "${solution}.account.name"
+    }
+}

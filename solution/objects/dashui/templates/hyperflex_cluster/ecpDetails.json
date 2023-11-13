@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "labsol:hyperflex_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "labsol:hyperflex_clusterDetailsList"
+            }
+        ],
+        "nameAttribute": "labsol.hyperflex.device.id"
+    }
+}

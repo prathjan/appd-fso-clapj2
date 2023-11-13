@@ -1,0 +1,29 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpRelationshipMap",
+    "target": "${solution}:account",
+    "view": "default",
+    "element": {
+        "instanceOf": "leftbar",
+        "elements": [
+            {
+                "key": "account",
+                "path": ".",
+                "entityAttribute": "${solution}.account.name",
+                "iconName": "AgentType.Appd"
+            },
+            {
+                "key": "hyperflex_cluster",
+                "path": "out(common:consists_of).to(${solution}:hyperflex_cluster)",
+                "entityAttribute": "${solution}.hyperflex.device.id",
+                "iconName": "AgentType.Appd"
+            },
+            {
+                "key": "ucs_domain",
+                "path": "out(common:consists_of).to(${solution}:ucs_domain)",
+                "entityAttribute": "${solution}.host.name",
+                "iconName": "AgentType.Appd"
+            }
+        ]
+    }
+}

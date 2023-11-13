@@ -1,0 +1,76 @@
+{
+    "kind": "template",
+    "name": "${solution}:accountInspectorWidget",
+    "target": "${solution}:account",
+    "view": "default",
+    "element": {
+        "instanceOf": "elements",
+        "elements": [
+            {
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                },
+                "elements": {
+                    "instanceOf": {
+                        "name": "properties"
+                    },
+                    "elements": [
+                        {
+                            "label": {
+                                "instanceOf": "text",
+                                "content": "${solution}.account.name"
+                            },
+                            "value": {
+                                "instanceOf": "string",
+                                "path": "attributes(${solution}.account.name)"
+                            }
+                        }
+                    ]
+                },
+                "title": "Properties"
+            },
+            {
+                "elements": [
+                    {
+                        "additionalInformation": {
+                            "branches": [
+                                {
+                                    "elements": {
+                                        "instanceOf": "empty"
+                                    },
+                                    "value": null
+                                }
+                            ],
+                            "defaultElements": {
+                                "elements": [
+                                    {
+                                        "emptyContent": "0",
+                                        "instanceOf": "number",
+                                        "path": "metrics(${solution}:${solution}.vm_count, \"intersight-otel\").value"
+                                    },
+                                    {
+                                        "content": " virtual machines",
+                                        "instanceOf": "text"
+                                    }
+                                ],
+                                "instanceOf": "elements"
+                            },
+                            "path": "metrics(${solution}:${solution}.vm_count, \"intersight-otel\").value"
+                        },
+                        "graph": {
+                            "path": "${solution}:${solution}.vm_count",
+                            "source": "intersight-otel"
+                        },
+                        "headline": "Virtual Machine Count",
+                        "instanceOf": {
+                            "name": "${solution}:sparkgraph"
+                        }
+                    }
+                ],
+                "instanceOf": {
+                    "name": "inspectorWidget"
+                }
+            }
+        ]
+    }
+}

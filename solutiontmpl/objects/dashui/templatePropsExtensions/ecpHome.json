@@ -1,0 +1,41 @@
+{
+    "kind": "templatePropsExtension",
+    "id": "${solution}:${solution}EcpHomeExtension",
+    "name": "dashui:ecpHome",
+    "view": "default",
+    "target": "*",
+    "requiredEntityTypes": [
+        "${solution}:account",
+        "${solution}:hyperflex_cluster",
+        "${solution}:ucs_domain"
+    ],
+    "props": {
+        "sections": [
+            {
+                "index": 6,
+                "name": "${solution}CoreSection",
+                "title": "${solution}"
+            }
+        ],
+        "entities": [
+            {
+                "index": 0,
+                "section": "${solution}CoreSection",
+                "entityAttribute": "${solution}.account.name",
+                "targetType": "${solution}:account"
+            },
+            {
+                "index": 1,
+                "section": "${solution}CoreSection",
+                "entityAttribute": "${solution}.hyperflex.device.id",
+                "targetType": "${solution}:hyperflex_cluster"
+            },
+            {
+                "index": 2,
+                "section": "${solution}CoreSection",
+                "entityAttribute": "${solution}.host.name",
+                "targetType": "${solution}:ucs_domain"
+            }
+        ]
+    }
+}

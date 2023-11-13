@@ -1,0 +1,49 @@
+[
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "labsol_account_entity_mapping",
+        "displayName": "Intersight Account Entity Mapping",
+        "description": "Intersight Account Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['labsol.account.name', 'labsol.fsotype']) && 'account'.equals(getValue(resourceAttributes, 'labsol.fsotype'))",
+        "entityType": "labsol:account",
+        "attributeNameMappings": {
+            "labsol.account.name": "labsol.account.name"
+        }
+    },
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "labsol_hyperflex_entity_mapping",
+        "displayName": "Intersight Hyperflex Entity Mapping",
+        "description": "Intersight Hyperflex Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['labsol.account.name', 'labsol.hyperflex.device.id', 'labsol.fsotype']) && 'hyperflex_cluster'.equals(getValue(resourceAttributes, 'labsol.fsotype'))",
+        "entityType": "labsol:hyperflex_cluster",
+        "attributeNameMappings": {
+            "labsol.account.name": "labsol.account.name",
+            "labsol.hyperflex.device.id": "labsol.hyperflex.device.id"
+        }
+    },
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "resourceMapping",
+        "name": "labsol_ucs_domain_entity_mapping",
+        "displayName": "Intersight UCS Domain Entity Mapping",
+        "description": "Intersight UCS Domain Entity Mapping",
+        "scopeFilter": "containsAll(resourceAttributes, ['labsol.account.name', 'labsol.host.name', 'labsol.fsotype']) && 'ucs_domain'.equals(getValue(resourceAttributes, 'labsol.fsotype'))",
+        "entityType": "labsol:ucs_domain",
+        "attributeNameMappings": {
+            "labsol.account.name": "labsol.account.name",
+            "labsol.host.name": "labsol.host.name"
+        }
+    }
+]

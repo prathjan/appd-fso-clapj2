@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "${solution}:ucs_domain",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "${solution}:ucs_domainDetailsList"
+            }
+        ],
+        "nameAttribute": "${solution}.host.name"
+    }
+}

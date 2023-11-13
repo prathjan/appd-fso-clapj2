@@ -1,0 +1,15 @@
+[
+    {
+        "associationType": "common:consists_of",
+        "displayName": "Declared Relationship between Intersight account and hyperflex cluster",
+        "fromType": "${solution}:account",
+        "kind": "associationDeclaration",
+        "name": "account_hyperflex_relationship_derivation_config",
+        "namespace": {
+            "name": "${solution}",
+            "version": 1
+        },
+        "scopeFilter": "true",
+        "toType": "${solution}:hyperflex_cluster"
+    }
+]

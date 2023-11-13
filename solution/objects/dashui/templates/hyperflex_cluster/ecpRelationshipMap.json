@@ -1,0 +1,23 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpRelationshipMap",
+    "target": "labsol:hyperflex_cluster",
+    "view": "default",
+    "element": {
+        "instanceOf": "leftbar",
+        "elements": [
+            {
+                "key": "hyperflex_cluster",
+                "path": ".",
+                "entityAttribute": "labsol.hyperflex.device.id",
+                "iconName": "AgentType.Appd"
+            },
+            {
+                "key": "account",
+                "path": "in(common:consists_of).from(labsol:account)",
+                "entityAttribute": "labsol.account.name",
+                "iconName": "AgentType.Appd"
+            }
+        ]
+    }
+}

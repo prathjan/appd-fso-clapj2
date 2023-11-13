@@ -1,0 +1,117 @@
+[
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "account",
+        "displayName": "Account",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "labsol.account.name"
+            ],
+            "required": [
+                "labsol.account.name"
+            ],
+            "attributes": {
+                "labsol.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                }
+            }
+        },
+        "metricTypes": [
+            "labsol:labsol.vm_count"
+        ],
+        "associationTypes": {
+            "common:consists_of": [
+                "labsol:hyperflex_cluster",
+                "labsol:ucs_domain"
+            ]
+        }
+    },
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "hyperflex_cluster",
+        "displayName": "Hyperflex Cluster",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "labsol.account.name",
+                "labsol.hyperflex.device.id"
+            ],
+            "required": [
+                "labsol.account.name",
+                "labsol.hyperflex.device.id"
+            ],
+            "attributes": {
+                "labsol.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                },
+                "labsol.hyperflex.device.id": {
+                    "type": "string",
+                    "description": "Hyperflex cluster ID"
+                }
+            }
+        },
+        "metricTypes": [
+            "labsol:labsol.hyperflex.read.iops",
+            "labsol:labsol.hyperflex.write.iops",
+            "labsol:labsol.hyperflex.read.throughput",
+            "labsol:labsol.hyperflex.write.throughput",
+            "labsol:labsol.hyperflex.read.latency",
+            "labsol:labsol.hyperflex.write.latency"
+        ]
+    },
+    {
+        "namespace": {
+            "name": "labsol",
+            "version": 1
+        },
+        "kind": "entity",
+        "name": "ucs_domain",
+        "displayName": "UCS Domain",
+        "lifecycleConfiguration": {
+            "purgeTtlInMinutes": 4200,
+            "retentionTtlInMinutes": 1440
+        },
+        "attributeDefinitions": {
+            "optimized": [
+                "labsol.account.name",
+                "labsol.host.name"
+            ],
+            "required": [
+                "labsol.account.name",
+                "labsol.host.name"
+            ],
+            "attributes": {
+                "labsol.account.name": {
+                    "type": "string",
+                    "description": "Name of Intersight Account"
+                },
+                "labsol.host.name": {
+                    "type": "string",
+                    "description": "UCS Domain Name"
+                }
+            }
+        },
+        "metricTypes": [
+            "labsol:labsol.ucs.network.utilization.average",
+            "labsol:labsol.ucs.network.transmit.rate",
+            "labsol:labsol.ucs.network.receive.rate"
+        ]
+    }
+]

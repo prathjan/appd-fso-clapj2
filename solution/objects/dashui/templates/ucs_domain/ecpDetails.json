@@ -1,0 +1,15 @@
+{
+    "kind": "template",
+    "name": "dashui:ecpDetails",
+    "target": "labsol:ucs_domain",
+    "view": "default",
+    "element": {
+        "instanceOf": "ocpSingle",
+        "elements": [
+            {
+                "instanceOf": "labsol:ucs_domainDetailsList"
+            }
+        ],
+        "nameAttribute": "labsol.host.name"
+    }
+}

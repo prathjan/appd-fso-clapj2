@@ -1,0 +1,82 @@
+{
+	"items": [
+        {
+			"title": "Introduction",
+			"content": "0-intro.md"
+		},
+		{
+			"title": "Introduction to OpenTelemetry",
+			"content": "1-otelintro2.ipynb"
+		},
+        {
+			"title": "Introduction to Observability with FSO Platform",
+			"content": "2-fsointro.md"
+		},
+        {
+			"title": "Setting up Observability for Public Cloud managed Infrastructure",
+			"content": "4-awsobs.ipynb"
+		},
+        {
+			"title": "Setting up Observability for Public Cloud managed Infrastructure",
+			"content": "4-awsconntf.ipynb"
+		},
+        {
+			"title": "Setting up Observability for Intersight managed Infrastructure",
+			"content": "3-interobs.ipynb"
+		},
+        {
+			"title": "Subscription and Review of Intersight FSO Solution With FSOC",
+			"content": "5-fsocintro.ipynb"
+		},
+        {
+			"title": "Setting up health rules ",
+			"content": "7-hrtf.ipynb"
+		},
+        {
+			"title": "Explore with Schema Browser and Query Builder",
+			"content": "8-review.ipynb"
+		},
+        {
+			"title": "Terminating Sandbox",
+			"content": "8-termination.ipynb"
+		}
+	],
+	"meta": {
+		"code_name": "appd-fso-clapj2",
+		"tags": [
+			{
+				"title": "Coding"
+			},
+			{
+			        "title": "Jupyter"
+			}
+		],
+		"time": "0",
+		"poweredBy": "",
+		"authors": [
+			{
+				"name": "Chris Lunsford",
+				"email": "chrlunsf@cisco.com"
+			}
+		],
+		"slug": "Basic data types, variables, conditionals and functions - we’ll teach you the building blocks on which all great apps are built.",
+		"repo": "jupyter-sample",
+		"moduleOnly": false,
+		"hasResources": false,
+		"byod": true,
+		"access": "public"
+	},
+	"config": {
+		"id": "appd-fso-clapj2",
+		"devEnv": {
+			"id": "devenv-app-jupyter-terraform",
+			"defaultFile": "",
+			"default_content": ""
+		},
+		"sandbox": {},
+		"video": {
+			"link": "",
+			"type": ""
+		}
+	}
+}

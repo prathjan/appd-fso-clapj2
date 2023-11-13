@@ -1,0 +1,41 @@
+{
+    "kind": "templatePropsExtension",
+    "id": "labsol:labsolEcpHomeExtension",
+    "name": "dashui:ecpHome",
+    "view": "default",
+    "target": "*",
+    "requiredEntityTypes": [
+        "labsol:account",
+        "labsol:hyperflex_cluster",
+        "labsol:ucs_domain"
+    ],
+    "props": {
+        "sections": [
+            {
+                "index": 6,
+                "name": "labsolCoreSection",
+                "title": "labsol"
+            }
+        ],
+        "entities": [
+            {
+                "index": 0,
+                "section": "labsolCoreSection",
+                "entityAttribute": "labsol.account.name",
+                "targetType": "labsol:account"
+            },
+            {
+                "index": 1,
+                "section": "labsolCoreSection",
+                "entityAttribute": "labsol.hyperflex.device.id",
+                "targetType": "labsol:hyperflex_cluster"
+            },
+            {
+                "index": 2,
+                "section": "labsolCoreSection",
+                "entityAttribute": "labsol.host.name",
+                "targetType": "labsol:ucs_domain"
+            }
+        ]
+    }
+}
